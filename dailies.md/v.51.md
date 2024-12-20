@@ -67,6 +67,44 @@ Hinder: Inte så mycket tid för att arbeta på grund av mycket möten/lektioner
 
 ---
 
+# 20/12
 
+**Start 09:15-09:30**
+
+**Scrum Master: Catrin**
+
+**David:**
+Igår: Jobbade på playAgain functionen som pushades upp till develop branchen
+Idag: Börja titta på questionCounter functionen
+Hinder: Väntar på point variabeln
+
+**Oskar:**
+Gjort: Implementat arrayen i funktionen, testat en gång. 
+Ska göra: Dubbelkolla testning och sen börja med printQuestions().
+Hinder: n/a
+
+**Karin:**
+Igår: Styleade startsidan! PR skapad och mergad
+Idag: Gör så att end-page dyker upp när man klickar på Avsluta quiz.
+Hinder: Inget hinder direkt, ska fräscha upp minnet bara  
+
+**Catrin:**
+Gjort igår: arbetat med timer funktionen
+Idag: Göra en formateringsfunktion för hur tiden visas
+Hinder: Ska jag lägga tid på formatering och en elapsed time-funktion som ligger i headern? 
+(Kom fram till på mötet: Jag kan välja själv om elapsed time-funktionen men lägger tid på en formateringsfunktion)
+
+**Carl:**
+Gjort: Alla frågor och testat.
+uppdaterad questions med test funktion
+Ska göra: Börja med points counter ++
+Hinder: Next button kod. // radio button event listeners. Hur man kan testa kod utan att compile:a med tsc. Other dependencies
+
+**Agnes:**
+Gjorde igår: Mycket focus på föreläsningar och möten och dessvärre flytt-organisation. 
+Idag: Ska äntligen börja koda lite och jobbar nu på att nextQuestionBtn ska aktiveras när man har valt ett av svarsallternativen. 
+Hinder: Har svårt att greppa hur koden ska hänga ihop och vad det är jag ska göra och vad det är någon annan gör. (dependencies) men känns kul att få labba lite med det! 
+
+---
  
  
