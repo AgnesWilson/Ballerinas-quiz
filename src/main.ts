@@ -1,7 +1,9 @@
 import '/style/style.scss';
 
 import playAgain from "./playAgain.ts";
+import activateNextQuestionBtn from './nextQuestionBtn';
 
+activateNextQuestionBtn();
 
 // Play Again Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
