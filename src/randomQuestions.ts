@@ -1,4 +1,4 @@
-interface Question {
+interface IQuizQuestions {
   id: number;
   questionText: string;
   answerOptionA: string;
@@ -8,7 +8,7 @@ interface Question {
   isPlayed: boolean;
 }
 //                                   Input: Question Array    Return: Question Array
-export function getRandomQuestions(questionsArray: Question[]): Question[] {
+export function getRandomQuestions(questionsArray: IQuizQuestions[]): IQuizQuestions[] {
   const allPlayed = questionsArray.every(question => question.isPlayed); 
   // Checks if all questions are played = true and then returns true if that's the case. 
   // So allPlayed will = true if every question has been played.
