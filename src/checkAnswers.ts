@@ -1,19 +1,90 @@
-import questions from './quizQuestions.ts';
+/* -----------------------------------------------------------------------
+--------------------------- Oskar gör koden nedan i printPage-------------------
+----------------------------------------------------------------------- */
 
-let i = 1;
+// Liten array för test
+const questions = [
+    {
+        id: 3,
+        questionText: 'Vilket kex företag tillverkar Ballerina kexet?',
+        answerOptionA: 'Marabou',
+        answerOptionB: 'Göteborgs Kex',
+        answerOptionC: 'Cloetta',
+        correctAnswer: 'Göteborgs Kex',
+        isPlayed: false,
+    },
+];
 
-questions.forEach((check) => {
-    if (check.answerOptionA === check.correctAnswer) {
-        console.log(i);
-        i ++;
-    } else if (check.answerOptionB === check.correctAnswer) {
-        console.log(i);
-        i++;
-    } else if (check.answerOptionC === check.correctAnswer) {
-        console.log(i);
-        i++;
-    } else {
-        console.log('Found mistake');
+
+const questionSection = document.querySelector('#container'); // access html section
+let question = questions[0]; // Makes the first question in the array variable
+
+/* Prints one question from array */
+function printQuestions() {
+
+    if (questionSection === null){
+        return;
     }
+    
+    questionSection.innerHTML = ''; // Clears the div each time
+
+    // Writes out the question with the info from the array
+    questionSection.innerHTML += ` 
+
+    ${questions[0].questionText}
+    <br>
+
+    <label>
+        <input type="radio" name="quizQuestionA" value="${question.answerOptionA}" id="questionRadioBtn">
+        <span>${question.answerOptionA}</span>
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="quizQuestionA" value="${question.answerOptionB}" id="questionRadioBtn">
+        <span>${question.answerOptionB}</span>
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="quizQuestionA" value="${question.answerOptionC}" id="questionRadioBtn">
+        <span>${question.answerOptionC}</span>
+    </label>
+    <br>
+
+`;
+    
+}
+
+printQuestions(); // Loads all questions into the html
+
+/* -----------------------------------------------------------------------
+--------------------------- detta ska in i main---------------------------
+----------------------------------------------------------------------- */
+
+const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
+
+// Listens to all inputs for change
+answer.forEach((radioBtn) => {
+    radioBtn.addEventListener('change', answerChecker);
 
 });
+
+
+/* -----------------------------------------------------------------------
+--------------------------- detta stannar i modulen ---------------------------
+----------------------------------------------------------------------- */
+
+// checks if user chosen input is the correct answer
+
+function answerChecker(e: Event) {
+
+    const playerAnswer = e.target as HTMLInputElement | null;
+
+    if (playerAnswer) {
+        console.log(playerAnswer.value === question.correctAnswer);
+    } else {
+        console.error('Answer is null');
+    }
+
+}
+
+export default answerChecker; // is this correxct??
