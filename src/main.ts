@@ -3,6 +3,11 @@ import '/style/style.scss';
 import playAgain from "./playAgain.ts";
 import activateNextQuestionBtn from './nextQuestionBtn';
 import questions from './quizQuestions.ts';
+import checkAnswer from './checkAnswers.ts';
+
+let points: number = 0; // Initialise points counter.
+
+const pointCountContainer = document.querySelector(#pointCountContainer);
 
 
 

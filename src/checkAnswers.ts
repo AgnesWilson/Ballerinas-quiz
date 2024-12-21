@@ -64,7 +64,7 @@ const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement
 
 // Listens to all inputs for change
 answer.forEach((radioBtn) => {
-    radioBtn.addEventListener('change', answerChecker);
+    radioBtn.addEventListener('change', checkAnswer);
 
 });
 
@@ -75,16 +75,17 @@ answer.forEach((radioBtn) => {
 
 // checks if user chosen input is the correct answer
 
-function answerChecker(e: Event) {
 
-    const playerAnswer = e.target as HTMLInputElement | null;
+function checkAnswer(e: Event) {
 
-    if (playerAnswer) {
-        console.log(playerAnswer.value === question.correctAnswer);
+    const playerAnswer = e.target as HTMLInputElement;
+
+    if (playerAnswer.value === question.correctAnswer) {
+        console.log(playerAnswer.value);
     } else {
         console.error('Answer is null');
-    }
+    };
 
 }
 
-export default answerChecker; // is this correxct??
+export default checkAnswer; // is this correxct??
