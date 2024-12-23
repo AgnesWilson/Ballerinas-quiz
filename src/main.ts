@@ -1,6 +1,13 @@
 import '/style/style.scss';
 
 import playAgain from "./playAgain.ts";
+
+import startGame from './startGameBtn.ts';
+
+//Start Game Button
+const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
+startBtn.addEventListener('click', startGame);
+
 import activateNextQuestionBtn from './nextQuestionBtn';
 import questions from './quizQuestions.ts';
 import checkAnswer from './checkAnswers.ts';
@@ -12,6 +19,7 @@ const pointCountContainer = document.querySelector(#pointCountContainer);
 
 
 activateNextQuestionBtn();
+
 
 // Play Again Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
