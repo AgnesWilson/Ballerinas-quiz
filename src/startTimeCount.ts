@@ -1,5 +1,3 @@
-
-
 let startTime: undefined | number;
 let totalTimeInSeconds: number;
 
@@ -11,9 +9,7 @@ function startTimer(): void {
 // end timer + get result
 function getTimeCount(): string {
     endTimer();
-    
     const totalTime: string = formatTime(totalTimeInSeconds);
-
     return totalTime;
 }
 
@@ -21,7 +17,6 @@ function endTimer(): void {
     if (startTime !== undefined) {
         // Beräkna skillnaden i sekunder och avrunda till ett heltal
         totalTimeInSeconds = Math.round((Date.now() - startTime) / 1000);
-        console.log(totalTimeInSeconds);
     }
 }
 

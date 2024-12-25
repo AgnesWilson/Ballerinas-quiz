@@ -1,42 +1,24 @@
 import '/style/style.scss';
-import { startTimer, getTimeCount } from './startTimeCount';
-
+import { getTimeCount } from './startTimeCount';
 import playAgain from "./playAgain.ts";
-
 import startGame from './startGameBtn.ts';
+import activateNextQuestionBtn from './nextQuestionBtn';
 
-//Start Game Button
+// Start Game Button
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 
-import activateNextQuestionBtn from './nextQuestionBtn';
-
 activateNextQuestionBtn();
-
-import startGame from './startGameBtn.ts';
-
-//Start Game Button
-const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
-startBtn.addEventListener('click', startGame);
-
-import activateNextQuestionBtn from './nextQuestionBtn';
-
-activateNextQuestionBtn();
-
 
 // Play Egain Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
-// Start button
-const startBtn = document.querySelector('#startBtn');
 
 // Finish button
 const endBtn = document.querySelector('#finishQuizBtn');
-startBtn?.addEventListener('click', startTimer);
 endBtn?.addEventListener('click', getTimeCount);
 
 // Play Again - Eventlistener
 playAgainBtn?.addEventListener('click', playAgain); // playAgain funcion in playAgain.ts file
-
 
 // ////////////// FINISH QUIZ BUTTON, SHOW END PAGE ////////////////////// 
 
@@ -45,12 +27,13 @@ const endPage = document.querySelector('#endPage') as HTMLDivElement;
 const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
 const resultContainer = document.querySelector('#resultContainer') as HTMLDivElement;
 let result = 7; // temporary result variable, change later
-let time = 3.12 // temporary time variable, change later
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
     quizPage.classList.add('hidden');
     endPage.classList.remove('hidden');
+    let time = getTimeCount();
+    console.log(time);
     resultContainer.innerHTML = `Du fick ${result} av 10 rätt! Din tid blev ${time} min`;
 
     // add later: stop timer when finish quiz btn is clicked
