@@ -3,6 +3,26 @@ import { startTimer, getTimeCount } from './startTimeCount';
 
 import playAgain from "./playAgain.ts";
 
+import startGame from './startGameBtn.ts';
+
+//Start Game Button
+const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
+startBtn.addEventListener('click', startGame);
+
+import activateNextQuestionBtn from './nextQuestionBtn';
+
+activateNextQuestionBtn();
+
+import startGame from './startGameBtn.ts';
+
+//Start Game Button
+const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
+startBtn.addEventListener('click', startGame);
+
+import activateNextQuestionBtn from './nextQuestionBtn';
+
+activateNextQuestionBtn();
+
 
 // Play Egain Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
