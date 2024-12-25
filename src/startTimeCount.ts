@@ -1,44 +1,40 @@
 
-const startBtn = document.querySelector('#startBtn');
-const endBtn = document.querySelector('#finishQuizBtn');
-// const timeSpan = document.querySelector('#timeCountContainer');
-const timeResult = document.querySelector('#time-result');
-startBtn?.addEventListener('click', startTimer);
-endBtn?.addEventListener('click', getTimeCount);
 
 let startTime: undefined | number;
-let minutes: undefined | number;
-let seconds: undefined | number;
+let totalTimeInSeconds: number;
 
 // Startar timer 
 function startTimer(): void {
     startTime = Date.now();
 }
 
-// const time = setInterval(() => {
-//     if (startTime !== undefined) {
-//         const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
-//         if (timeSpan !== null) {
-//             timeSpan.innerHTML = `${elapsedSeconds}`;
-//         }
-//     }
-// }, 1000);
+// end timer + get result
+function getTimeCount(): string {
+    endTimer();
+    
+    const totalTime: string = formatTime(totalTimeInSeconds);
 
-function getTimeCount(): void {
+    return totalTime;
+}
+
+function endTimer(): void {
     if (startTime !== undefined) {
-        // Beräkna skillnaden i millisekunder
-        const elapsedMilliseconds = Date.now() - startTime;
-        // Konvertera till sekunder
-        const totalSeconds = Math.floor(elapsedMilliseconds / 1000);
-        // Beräkna minuter och sekunder
-        minutes = Math.floor(totalSeconds / 60);
-        seconds = totalSeconds % 60;
-        // clearInterval(time);
-    }
-    const timeCount = `${minutes}:${seconds}`;
-    if (timeResult !== null) {
-        timeResult.innerHTML += `${timeCount} sekunder`;
+        // Beräkna skillnaden i sekunder och avrunda till ett heltal
+        totalTimeInSeconds = Math.round((Date.now() - startTime) / 1000);
+        console.log(totalTimeInSeconds);
     }
 }
 
-export default getTimeCount;
+function formatTime(seconds: number): string {
+    // Beräkna minuter och sekunder
+    const minutes = Math.round(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    // Lägg till ledande nollor om det behövs
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+export { startTimer, getTimeCount };
