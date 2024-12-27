@@ -32,7 +32,7 @@ let result = 7; // temporary result variable, change later
 finishQuizBtn.addEventListener('click', () => {
     quizPage.classList.add('hidden');
     endPage.classList.remove('hidden');
-    let time = getTimeCount();
+    const time = getTimeCount();
     console.log(time);
     resultContainer.innerHTML = `Du fick ${result} av 10 rätt! Din tid blev ${time} min`;
 
