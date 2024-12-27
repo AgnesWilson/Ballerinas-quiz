@@ -1,6 +1,8 @@
 import '/style/style.scss';
 import { getTimeCount } from './startTimeCount';
+import questions from './quizQuestions.ts';
 import playAgain from "./playAgain.ts";
+import { getRandomQuestions } from './randomQuestions.ts';
 import startGame from './startGameBtn.ts';
 import activateNextQuestionBtn from './nextQuestionBtn';
 
@@ -8,9 +10,9 @@ import activateNextQuestionBtn from './nextQuestionBtn';
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 
-activateNextQuestionBtn();
+// Play Again Button
+//  activateNextQuestionBtn(); Commented this out because it threw an error, couldn't test code. 
 
-// Play Egain Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 
 // Finish button
@@ -38,3 +40,36 @@ finishQuizBtn.addEventListener('click', () => {
 
     // add later: stop timer when finish quiz btn is clicked
 })
+
+
+// ################################################### //
+// ####################### PRINT ##################### //
+// ################################################### //
+const newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
+
+let questionCounter: number = 0; // Placeholder variable for count to use as index finder
+const questionWrapper = document.querySelector("#questionContainer") as HTMLDivElement;
+
+function printQuestions() {
+    questionWrapper.innerHTML = `
+    <form id="questionForm">
+    <fieldset>
+      <legend>${newQuestions[questionCounter].questionText}</legend>
+      <label>
+        <input type="radio" name="question" id="q1">
+        ${newQuestions[questionCounter].answerOptionA}
+      </label>
+      <label>
+        <input type="radio" name="question" id="q2">
+        ${newQuestions[questionCounter].answerOptionB}
+      </label>
+      <label>
+        <input type="radio" name="question" id="q3">
+        ${newQuestions[questionCounter].answerOptionC}
+      </label>
+    </fieldset>
+  </form>`;
+}
+
+startBtn.addEventListener('click', printQuestions);
+playAgainBtn.addEventListener('click', printQuestions);
