@@ -10,7 +10,7 @@ startBtn.addEventListener('click', startGame);
 
 import activateNextQuestionBtn from './nextQuestionBtn';
 
-//  activateNextQuestionBtn(); Commented this out because it threw an error, couldn't test code. 
+// ; Commented this out because it threw an error, couldn't test code. 
 
 // Play Again Button
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
@@ -64,6 +64,8 @@ function printQuestions() {
       </label>
     </fieldset>
   </form>`;
+
+  activateNextQuestionBtn()
 }
 
 startBtn.addEventListener('click', printQuestions);
