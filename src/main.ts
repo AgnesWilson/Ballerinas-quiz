@@ -13,6 +13,7 @@ startBtn.addEventListener('click', startGame);
 // Play Again Button
 //  activateNextQuestionBtn(); Commented this out because it threw an error, couldn't test code. 
 
+
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 
 // Finish button
@@ -69,6 +70,8 @@ function printQuestions() {
       </label>
     </fieldset>
   </form>`;
+
+  activateNextQuestionBtn()
 }
 
 startBtn.addEventListener('click', printQuestions);
