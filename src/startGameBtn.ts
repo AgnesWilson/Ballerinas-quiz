@@ -14,3 +14,4 @@ function startGame(): void {
 };
 
 export default startGame;
+
