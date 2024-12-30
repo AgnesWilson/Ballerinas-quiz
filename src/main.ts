@@ -13,6 +13,7 @@ startBtn.addEventListener('click', startGame);
 // Play Again Button
 //  activateNextQuestionBtn(); Commented this out because it threw an error, couldn't test code. 
 
+
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 
 // Finish button
@@ -76,6 +77,7 @@ function printQuestions() {
   </form>`;
 
 
+
     // This checks the answer 
 
     const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
@@ -93,6 +95,7 @@ function printQuestions() {
 
     
     activateNextQuestionBtn();
+
 
 }
 

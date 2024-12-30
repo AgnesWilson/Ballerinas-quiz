@@ -67,7 +67,7 @@
 ### Vem är scrum master?
     2 dagar var. 
     - David tar 18/12 - 19/12
-    - Catrin tar 20/12 - 27/12
+    - Catrin tar 20/12, 27/12
     - Karin tar 30/12 - 31/12 
     - Oskar tar 2/1 - 3/1
     - Agnes tar 6/1 - 7/1
