@@ -10,10 +10,6 @@ import activateNextQuestionBtn from './nextQuestionBtn';
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 
-// Play Again Button
-//  activateNextQuestionBtn(); Commented this out because it threw an error, couldn't test code. 
-
-
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 
 // Finish button
@@ -116,4 +112,6 @@ function checkAnswer(e: Event) {
 
 
 startBtn.addEventListener('click', printQuestions);
-playAgainBtn.addEventListener('click', printQuestions);
+
+//Exports printQuestions to startGameBtn.ts 
+export default printQuestions;

@@ -1,4 +1,5 @@
 import { startTimer } from './startTimeCount';
+import printQuestions from './main';
 
 function startGame(): void {
     const startPage = document.querySelector('#startPage') as HTMLDivElement;
@@ -7,11 +8,10 @@ function startGame(): void {
         startPage.classList.add("hidden"); // Hide start-page
         quizPage.classList.remove("hidden"); // Show quiz-page
 
-        // randomQuestions();
         startTimer(); 
-
-        // printQuestions();
-        // questionCounter();
+        printQuestions();
+        // questionCounter(); ??
 };
 
 export default startGame;
+
