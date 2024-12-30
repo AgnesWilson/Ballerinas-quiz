@@ -1,7 +1,7 @@
 // exchange these when real answers have been added and change the "as HTML" to TS?? 
-const q1 = document.querySelector('#q1') as HTMLInputElement;
+/* const q1 = document.querySelector('#q1') as HTMLInputElement;
 const q2 = document.querySelector('#q2') as HTMLInputElement;
-const q3 = document.querySelector('#q3') as HTMLInputElement;
+const q3 = document.querySelector('#q3') as HTMLInputElement; */
 
 // Activate the next-question button when the user chooses an answer
 function ifRadioBtnHasBeenChecked() {

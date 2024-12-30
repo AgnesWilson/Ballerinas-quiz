@@ -56,20 +56,25 @@ function printQuestions() {
     <form id="questionForm">
     <fieldset>
       <legend>${newQuestions[questionCounter].questionText}</legend>
+      <br>
       <label>
         <input type="radio" name="question" id="q1" value="${newQuestions[questionCounter].answerOptionA}">
         ${newQuestions[questionCounter].answerOptionA}
       </label>
+      <br>
       <label>
         <input type="radio" name="question" id="q2" value="${newQuestions[questionCounter].answerOptionB}">
         ${newQuestions[questionCounter].answerOptionB}
       </label>
+      <br>
       <label>
         <input type="radio" name="question" id="q3" value="${newQuestions[questionCounter].answerOptionC}">
         ${newQuestions[questionCounter].answerOptionC}
       </label>
+      <br>
     </fieldset>
   </form>`;
+
 
     // This checks the answer 
 
@@ -82,7 +87,17 @@ function printQuestions() {
 
     });
 
+    const q1 = document.querySelector('#q1') as HTMLInputElement;
+    const q2 = document.querySelector('#q2') as HTMLInputElement;
+    const q3 = document.querySelector('#q3') as HTMLInputElement;
+
+    
+    activateNextQuestionBtn();
+
 }
+
+
+
 
 /* -----------------------------------------------------------------------
 --------------------------- Answer check function ---------------------------
@@ -91,8 +106,8 @@ function printQuestions() {
 // If answer is correct updates result with one
 
 function checkAnswer(e: Event) {
-
-    let playerAnswer = e.target as HTMLInputElement;
+    
+    const playerAnswer = e.target as HTMLInputElement;
 
     if (playerAnswer.value === newQuestions[questionCounter].correctAnswer) {
         result += 1;
@@ -100,7 +115,6 @@ function checkAnswer(e: Event) {
     };
 
 }
-
 
 
 startBtn.addEventListener('click', printQuestions);
