@@ -29,7 +29,8 @@ const quizPage = document.querySelector('#quizPage') as HTMLDivElement;
 const endPage = document.querySelector('#endPage') as HTMLDivElement;
 const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
 const resultContainer = document.querySelector('#resultContainer') as HTMLDivElement;
-let result = 7; // temporary result variable, change later
+
+let result = 0; 
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
@@ -56,23 +57,68 @@ function printQuestions() {
     <form id="questionForm">
     <fieldset>
       <legend>${newQuestions[questionCounter].questionText}</legend>
+      <br>
       <label>
-        <input type="radio" name="question" id="q1">
+        <input type="radio" name="question" id="q1" value="${newQuestions[questionCounter].answerOptionA}">
         ${newQuestions[questionCounter].answerOptionA}
       </label>
+      <br>
       <label>
-        <input type="radio" name="question" id="q2">
+        <input type="radio" name="question" id="q2" value="${newQuestions[questionCounter].answerOptionB}">
         ${newQuestions[questionCounter].answerOptionB}
       </label>
+      <br>
       <label>
-        <input type="radio" name="question" id="q3">
+        <input type="radio" name="question" id="q3" value="${newQuestions[questionCounter].answerOptionC}">
         ${newQuestions[questionCounter].answerOptionC}
       </label>
+      <br>
     </fieldset>
   </form>`;
 
-  activateNextQuestionBtn()
+
+
+    // This checks the answer 
+
+    const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
+
+
+    // Listens to all inputs for change
+    answer.forEach((radioBtn) => {
+        radioBtn.addEventListener('change', checkAnswer);
+
+    });
+
+    const q1 = document.querySelector('#q1') as HTMLInputElement;
+    const q2 = document.querySelector('#q2') as HTMLInputElement;
+    const q3 = document.querySelector('#q3') as HTMLInputElement;
+
+    
+    activateNextQuestionBtn();
+
+
 }
+
+
+
+
+/* -----------------------------------------------------------------------
+--------------------------- Answer check function ---------------------------
+----------------------------------------------------------------------- */
+
+// If answer is correct updates result with one
+
+function checkAnswer(e: Event) {
+    
+    const playerAnswer = e.target as HTMLInputElement;
+
+    if (playerAnswer.value === newQuestions[questionCounter].correctAnswer) {
+        result += 1;
+        console.log(result);
+    };
+
+}
+
 
 startBtn.addEventListener('click', printQuestions);
 playAgainBtn.addEventListener('click', printQuestions);

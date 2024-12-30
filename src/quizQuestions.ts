@@ -212,4 +212,32 @@ const questions: IQuizQuestions[] = [
 
 ];
 
+
+/* ---------------Funktion för att testa att alla frågor ger ett korrekt svar. ---------------------
+
+Rekommendation:  Om nya frågor läggs till, kör den funktion i terminalen för att testa att inga buggar finns.
+
+
+let i = 1;
+
+questions.forEach((check) => {
+    if (check.answerOptionA === check.correctAnswer) {
+        console.log(i);
+        i ++;
+    } else if (check.answerOptionB === check.correctAnswer) {
+        console.log(i);
+        i++;
+    } else if (check.answerOptionC === check.correctAnswer) {
+        console.log(i);
+        i++;
+    } else {
+        console.log('Found mistake');
+    }
+
+});
+*/
+
+
+
 export default questions;
+
