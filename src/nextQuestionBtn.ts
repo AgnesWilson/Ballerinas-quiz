@@ -26,8 +26,8 @@ function ifRadioBtnHasBeenChecked() {
 
 // Event-listeners for radio-btns
 function activateNextQuestionBtn() {
-    //declaring q1-q3 againn since they were declared inside the ifRadioBtnHasBeenChecked() 
-    //and not globally in this module like they were before 
+    // declaring q1-q3 againn since they were declared inside the ifRadioBtnHasBeenChecked() 
+    // and not globally in this module like they were before 
     const q1 = document.querySelector('#q1') as HTMLInputElement;
     const q2 = document.querySelector('#q2') as HTMLInputElement;
     const q3 = document.querySelector('#q3') as HTMLInputElement;
