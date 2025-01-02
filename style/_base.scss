@@ -13,7 +13,9 @@ main {
         display: none;
     }
 
-    .startPage {
+    .startPage, 
+    .endPage {
+        //Lägger till end page här för att kunna återanvända stylign för knappen
         width: 100%;
         height: 100vh;
         h1 {
@@ -24,8 +26,10 @@ main {
             margin-left: 0.5rem;
         }
 
-        button {
-            //stylar bort så knappen ser ut som text
+        button,
+        .button {
+            //stylar bort så knappen ser ut som text 
+            //.button är knappen på end page 
             background: none;
             border: none;
             text-decoration: underline;
@@ -38,6 +42,19 @@ main {
                 font-weight: 500;
             }
         }
+    }
+
+    .endPage {
+
+        .resultPresenter {
+            margin-top: 5rem;
+            margin-left: 1rem;
+        }
+
+        .button {
+            margin-top: 10rem; 
+        }
+
     }
 }
   
