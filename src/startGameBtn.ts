@@ -6,7 +6,7 @@ function startGame(): void {
     const quizPage = document.querySelector('#quizPage') as HTMLDivElement;
 
         startPage.classList.add("hidden"); // Hide start-page
-        quizPage.classList.remove("hidden"); // Show quiz-page
+        quizPage.classList.remove("hidden"); // Show quiz-page 
 
         startTimer(); 
         printQuestions();
