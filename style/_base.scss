@@ -44,14 +44,24 @@ main {
         }
     }
 
-    .endPage {
+    .endPage { //styling end page 
 
-        .resultPresenter {
+        .result { //statisk resultattext
             margin-top: 5rem;
             margin-left: 1rem;
         }
 
-        .button {
+        .printSummary { //resultat som genereras från main.ts
+            margin-top: 1rem;
+            margin-left: 1rem;
+            line-height: 1.5rem;
+
+            .time { //span element för att kunna lägga tid-resultatet på en ny rad
+                display: block;
+            }
+        }
+
+        .button { //flyttar ner knappen lite
             margin-top: 10rem; 
         }
 
