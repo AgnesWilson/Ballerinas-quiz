@@ -69,6 +69,7 @@ function printQuestions() {
         ${newQuestions[questionCounter].answerOptionC}
       </label>
       <br>
+      <button id="nextQuestionBtn" class="quizBtn" disabled>Nästa fråga</button>
     </fieldset>
   </form>`;
 
