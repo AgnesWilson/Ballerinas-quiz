@@ -112,9 +112,5 @@ function checkAnswer(e: Event) {
 
 playAgainBtn.addEventListener('click', printQuestions);
 
-
-startBtn.addEventListener('click', printQuestions);
-
-
-//Exports printQuestions to startGameBtn.ts 
+// Exports printQuestions to startGameBtn.ts 
 export default printQuestions;
