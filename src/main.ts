@@ -4,7 +4,8 @@ import questions from './quizQuestions.ts';
 import playAgain from "./playAgain.ts";
 import { getRandomQuestions } from './randomQuestions.ts';
 import startGame from './startGameBtn.ts';
-import activateNextQuestionBtn from './nextQuestionBtn';
+// import activateNextQuestionBtn from './nextQuestionBtn';
+import { questionCounter, activateNextQuestionBtn } from './nextQuestionBtn';
 
 // Start Game Button
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
@@ -19,13 +20,16 @@ endBtn?.addEventListener('click', getTimeCount);
 // Play Again - Eventlistener
 playAgainBtn?.addEventListener('click', playAgain); // playAgain funcion in playAgain.ts file
 
-// ////////////// FINISH QUIZ BUTTON, SHOW END PAGE ////////////////////// 
+/* -----------------------------------------------------------------------
+------------------ FINISH QUIZ BUTTON, SHOW END PAGE -----------------
+----------------------------------------------------------------------- */
 
 const quizPage = document.querySelector('#quizPage') as HTMLDivElement;
 const endPage = document.querySelector('#endPage') as HTMLDivElement;
 const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
 const resultContainer = document.querySelector('#resultContainer') as HTMLDivElement;
 
+// Result Variable
 let result = 0; 
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
@@ -35,17 +39,13 @@ finishQuizBtn.addEventListener('click', () => {
     const time = getTimeCount();
     console.log(time);
     resultContainer.innerHTML = `Du fick ${result} av 10 rätt! Din tid blev ${time} min`;
-
-    // add later: stop timer when finish quiz btn is clicked
 })
 
-
-// ################################################### //
-// ####################### PRINT ##################### //
-// ################################################### //
+/* -----------------------------------------------------------------------
+--------------------------- PRINT QUESTION ---------------------------
+----------------------------------------------------------------------- */
 const newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
 
-let questionCounter: number = 0; // Placeholder variable for count to use as index finder
 const questionWrapper = document.querySelector("#questionContainer") as HTMLDivElement;
 
 function printQuestions() {
@@ -72,26 +72,17 @@ function printQuestions() {
     </fieldset>
   </form>`;
 
-
-
     // This checks the answer 
 
     const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
 
-
     // Listens to all inputs for change
     answer.forEach((radioBtn) => {
         radioBtn.addEventListener('change', checkAnswer);
-
     });
     
     activateNextQuestionBtn();
-
-
 }
-
-
-
 
 /* -----------------------------------------------------------------------
 --------------------------- Answer check function ---------------------------
@@ -107,7 +98,6 @@ function checkAnswer(e: Event) {
         result += 1;
         console.log(result);
     };
-
 }
 
 playAgainBtn.addEventListener('click', printQuestions);
