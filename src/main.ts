@@ -81,6 +81,7 @@ finishQuizBtn.addEventListener('click', () => {
 const newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
 
 const questionWrapper = document.querySelector('#questionContainer') as HTMLDivElement;
+const currentQuestion = document.querySelector('#currentQuestion') as HTMLDivElement;
 
 function printQuestions() {
   questionWrapper.innerHTML = `
@@ -106,14 +107,8 @@ function printQuestions() {
     </fieldset>
   </form>`;
 
-  // This checks the answer
-
-  // const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
-
-  // // Listens to all inputs for change
-  // answer.forEach((radioBtn) => {
-  //     radioBtn.addEventListener('change', checkAnswer);
-  // });
+  // Show and update current question in html
+  currentQuestion.innerHTML = `<span>Fråga ${questionCounter + 1}</span>`;
 
   activateNextQuestionBtn();
 }
