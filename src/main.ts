@@ -17,6 +17,17 @@ let result: number = 0;
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 
+// -------- CHECK IF QUIZ IS DONE -----------
+function checkIfQuizIsDone() {
+    if (questionCounter === 9) {
+        finishQuizBtn.classList.remove('hidden');
+        nextQuestionBtn.classList.add('hidden');
+    } else {
+        finishQuizBtn.classList.add('hidden');
+        nextQuestionBtn.classList.remove('hidden');
+    }
+}
+
 //  -------- NEXT QUESTION ---------
 
 const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
@@ -35,6 +46,7 @@ function clickNextQuestion() {
   console.log('Ställda frågor: ', questionCounter);
   printQuestions(); // Prints the next question page
   ifRadioBtnHasBeenChecked(); // Check the next page's radio buttons to make the button inactive again
+  checkIfQuizIsDone();
 }
 
 //  -------- CHECK ANSWER ---------
@@ -68,6 +80,12 @@ const resultContainer = document.querySelector('#resultContainer') as HTMLDivEle
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="question"]:checked') as HTMLInputElement;
+  
+    // If an option is selected, check the answer if it matches the option
+    if (selectedOption) {
+      checkAnswer(selectedOption.value);
+    }
   quizPage.classList.add('hidden');
   endPage.classList.remove('hidden');
   const time = getTimeCount();
