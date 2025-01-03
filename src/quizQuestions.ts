@@ -192,10 +192,10 @@ const questions: IQuizQuestions[] = [
     {
         id: 19,
         questionText: 'Ballerina är också namnet på...',
-        answerOptionA: 'Et programmeringsspråk',
+        answerOptionA: 'Ett programmeringsspråk',
         answerOptionB: 'En katt sort från Mongoliet',
         answerOptionC: 'Piskan som lejontämjare använder',
-        correctAnswer: 'Et programmeringsspråk',
+        correctAnswer: 'Ett programmeringsspråk',
         isPlayed: false,
     },
 
