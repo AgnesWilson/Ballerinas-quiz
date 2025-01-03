@@ -1,19 +1,9 @@
-// import { questionCounter } from './main';
-import printQuestions from "./main";
-const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
-let questionCounter: number = 0; // Placeholder variable for count to use as index finder
-
-// EVENT FOR NEXT QUESTION BUTTON
-nextQuestionBtn.addEventListener('click', (event) => {
-    questionCounter++; // Updates current question variable
-    console.log('Ställda frågor ',questionCounter); 
-    printQuestions(); // Prints the next question page
-    ifRadioBtnHasBeenChecked(); // Check next question's radio buttons to make button inactive
-})
 
 /* -----------------------------------------------------------------------
 ---- Activate the next-question button when the user chooses an answer ---
 ---------------------------- Two functions ---------------------------- */
+
+const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
 
 function ifRadioBtnHasBeenChecked() {
     // Declaring the q1-q3 inside the function 
@@ -45,12 +35,4 @@ function activateNextQuestionBtn() {
     q3.addEventListener('click', ifRadioBtnHasBeenChecked);
 }
 
-// Exportera funktionen som default
-
-// CARL NOTES
-// The check answer function chouls most likely live here. so that the user flow becomes:
-// user chose answer with radio button -> next question button get activated -> user clicks next question buttton ->
-// functions for next question becomes: 1. checks if answer is correct 2. updates points counter 3. updates questio counter
-// 4. prints page with questions
-
-export { questionCounter, activateNextQuestionBtn };
+export { activateNextQuestionBtn, ifRadioBtnHasBeenChecked };
