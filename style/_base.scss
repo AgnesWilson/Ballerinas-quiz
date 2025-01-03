@@ -49,9 +49,13 @@ main {
     // ################# //
 
     .quizPage {
-        width: 100%;
+        width: 15rem;
         height: 100vh;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh; 
         input {
             -webkit-appearance: none; 
             width: 20px;
@@ -69,10 +73,8 @@ main {
         }
 
         .questionWrapper {
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            height: 100vh; 
+            width: 100%;
+            
             form {
                 fieldset {
                     display: flex;
@@ -82,32 +84,41 @@ main {
             }
         }
         
-        // .quizBtn {
-        //     position: absolute;
-        //     bottom: 37%;
-        //     left: 24%;
-        // }
+        .quizBtn {
+            margin-top: 0.1rem;
+            width: 100%;
 
+            border: 1px solid black;
+            border-radius: 0;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+
+            &:hover {
+                background-color: green;
+            }
+        }
+    }
 
     .endPage { //styling end page 
 
         .result { //statisk resultattext
-            margin-top: 5rem;
-            margin-left: 1rem;
+                margin-top: 5rem;
+                margin-left: 1rem;
         }
 
         .printSummary { //resultat som genereras från main.ts
-            margin-top: 1rem;
-            margin-left: 1rem;
-            line-height: 1.5rem;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                line-height: 1.5rem;
 
             .time { //span element för att kunna lägga tid-resultatet på en ny rad
-                display: block;
+                    display: block;
             }
         }
 
         .button { //flyttar ner knappen lite
-            margin-top: 10rem; 
+                margin-top: 10rem; 
         }
 
 

@@ -15,7 +15,7 @@ let result: number = 0;
 //  -------- START GAME ------------
 
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
-startBtn?.addEventListener('click', startGame);
+startBtn.addEventListener('click', startGame);
 
 //  -------- NEXT QUESTION ---------
 
@@ -103,8 +103,6 @@ function printQuestions() {
         ${newQuestions[questionCounter].answerOptionC}
       </label>
       <br>
-      <button id="nextQuestionBtn" class="quizBtn" disabled>Nästa fråga</button>
-      <button id="finishQuizBtn" class="quizBtn hidden">Avsluta quiz</button>
     </fieldset>
   </form>`;
 
