@@ -49,13 +49,14 @@ function checkAnswer(playerAnswer: string) {
 }
 
 //  -------- PLAY AGAIN ---------
+const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 playAgainBtn?.addEventListener('click', () => {
   result = 0; // resets points
   questionCounter = 0; // resets questionCounter
   playAgain();  // playAgain funcion in playAgain.ts file
 
-  console.log('Points:', result);
-  console.log('Qs:', questionCounter);
+  console.log('Points:', result); // dessa kan tas bort
+  console.log('Qs:', questionCounter); // dessa kan tas bort
 });
 
 
