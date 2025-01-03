@@ -8,7 +8,7 @@ import activateNextQuestionBtn from './nextQuestionBtn';
 
 // Start Game Button
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
-startBtn.addEventListener('click', startGame);
+startBtn?.addEventListener('click', startGame);
 
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 
@@ -29,7 +29,7 @@ const resultContainer = document.querySelector('#resultContainer') as HTMLDivEle
 let result = 0; 
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
-finishQuizBtn.addEventListener('click', () => {
+finishQuizBtn?.addEventListener('click', () => {
     quizPage.classList.add('hidden');
     endPage.classList.remove('hidden');
     const time = getTimeCount();
@@ -70,13 +70,12 @@ function printQuestions() {
       </label>
       <br>
       <button id="nextQuestionBtn" class="quizBtn" disabled>Nästa fråga</button>
+      <button id="finishQuizBtn" class="quizBtn hidden">Avsluta quiz</button>
     </fieldset>
   </form>`;
 
 
-
     // This checks the answer 
-
     const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
 
 
@@ -87,8 +86,6 @@ function printQuestions() {
     });
     
     activateNextQuestionBtn();
-
-
 }
 
 
