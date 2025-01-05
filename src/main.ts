@@ -130,7 +130,7 @@ function printQuestions() {
   </form>`;
 
   // Show and update current question in html
-  currentQuestion.innerHTML = `<span>Fråga ${questionCounter + 1}</span>`;
+  currentQuestion.innerHTML = `<span>Fråga</span><span>${questionCounter + 1}/10</span>`;
 
   activateNextQuestionBtn();
 }
