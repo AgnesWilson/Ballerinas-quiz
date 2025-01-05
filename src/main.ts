@@ -17,6 +17,17 @@ let result: number = 0;
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 
+// -------- CHECK IF QUIZ IS DONE -----------
+function checkIfQuizIsDone() {
+    if (questionCounter === 9) {
+        finishQuizBtn.classList.remove('hidden');
+        nextQuestionBtn.classList.add('hidden');
+    } else {
+        finishQuizBtn.classList.add('hidden');
+        nextQuestionBtn.classList.remove('hidden');
+    }
+}
+
 //  -------- NEXT QUESTION ---------
 
 const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
@@ -35,6 +46,7 @@ function clickNextQuestion() {
   console.log('Ställda frågor: ', questionCounter);
   printQuestions(); // Prints the next question page
   ifRadioBtnHasBeenChecked(); // Check the next page's radio buttons to make the button inactive again
+  checkIfQuizIsDone();
 }
 
 //  -------- CHECK ANSWER ---------
@@ -50,7 +62,15 @@ function checkAnswer(playerAnswer: string) {
 
 //  -------- PLAY AGAIN ---------
 const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
-playAgainBtn?.addEventListener('click', playAgain); // playAgain funcion in playAgain.ts file
+playAgainBtn?.addEventListener('click', () => {
+  result = 0; // resets points
+  questionCounter = 0; // resets questionCounter
+  playAgain();  // playAgain funcion in playAgain.ts file
+
+  console.log('Points:', result); // dessa kan tas bort
+  console.log('Qs:', questionCounter); // dessa kan tas bort
+});
+
 
 //  -------- FINNISH BTN ---------
 const endBtn = document.querySelector('#finishQuizBtn'); // DUPLICATE?!? Finish  Quiz  button below - row 65
@@ -68,6 +88,12 @@ const resultContainer = document.querySelector('#resultContainer') as HTMLDivEle
 
 // when finsih quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
+    const selectedOption = document.querySelector('input[name="question"]:checked') as HTMLInputElement;
+  
+    // If an option is selected, check the answer if it matches the option
+    if (selectedOption) {
+      checkAnswer(selectedOption.value);
+    }
   quizPage.classList.add('hidden');
   endPage.classList.remove('hidden');
   const time = getTimeCount();
@@ -81,6 +107,7 @@ finishQuizBtn.addEventListener('click', () => {
 const newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
 
 const questionWrapper = document.querySelector('#questionContainer') as HTMLDivElement;
+const currentQuestion = document.querySelector('#currentQuestion') as HTMLDivElement;
 
 function printQuestions() {
   questionWrapper.innerHTML = `
@@ -102,14 +129,8 @@ function printQuestions() {
     </fieldset>
   </form>`;
 
-  // This checks the answer
-
-  // const answer = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>; // Access all inputs
-
-  // // Listens to all inputs for change
-  // answer.forEach((radioBtn) => {
-  //     radioBtn.addEventListener('change', checkAnswer);
-  // });
+  // Show and update current question in html
+  currentQuestion.innerHTML = `<span>Fråga ${questionCounter + 1}</span>`;
 
   activateNextQuestionBtn();
 }
