@@ -12,8 +12,6 @@ function playAgain(): void {
         console.error("Start or End page cant be found. Check ID and Selectors."); // Show error if pages can't be found.
     }
 
-    // TODO: Add reset of Points variable whene it has been set. For now, only console log!
-    console.log("Points set to 0");
 }
 
 export default playAgain;
