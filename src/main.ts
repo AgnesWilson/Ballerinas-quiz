@@ -87,22 +87,18 @@ function printQuestions() {
     <form id="questionForm">
     <fieldset>
       <legend>${newQuestions[questionCounter].questionText}</legend>
-      <br>
       <label>
         <input type="radio" name="question" id="q1" value="${newQuestions[questionCounter].answerOptionA}">
         ${newQuestions[questionCounter].answerOptionA}
       </label>
-      <br>
       <label>
         <input type="radio" name="question" id="q2" value="${newQuestions[questionCounter].answerOptionB}">
         ${newQuestions[questionCounter].answerOptionB}
       </label>
-      <br>
       <label>
         <input type="radio" name="question" id="q3" value="${newQuestions[questionCounter].answerOptionC}">
         ${newQuestions[questionCounter].answerOptionC}
       </label>
-      <br>
     </fieldset>
   </form>`;
 
