@@ -201,11 +201,11 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 20,
-        questionText: 'Ballerina är också namnet på...',
-        answerOptionA: 'Et programmeringsspråk',
-        answerOptionB: 'En katt sort från Mongoliet',
-        answerOptionC: 'Piskan som lejontämjare använder',
-        correctAnswer: 'Et programmeringsspråk',
+        questionText: 'Hur ska man plantera ballerina potatis?',
+        answerOptionA: '5-7 mm radavstånd',
+        answerOptionB: '5-15 m radavstånd',
+        answerOptionC: '50-70 cm radavstånd',
+        correctAnswer: '50-70 cm radavstånd',
         isPlayed: false,
     },
 

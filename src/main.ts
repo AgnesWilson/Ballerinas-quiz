@@ -46,7 +46,6 @@ function clickNextQuestion() {
   }
 
   questionCounter++; // Updates the question variable / +1
-  console.log('Ställda frågor: ', questionCounter);
   printQuestions(); // Prints the next question page
   ifRadioBtnHasBeenChecked(); // Check the next page's radio buttons to make the button inactive again
   checkIfQuizIsDone();
@@ -57,10 +56,7 @@ function clickNextQuestion() {
 function checkAnswer(playerAnswer: string) {
   if (playerAnswer === newQuestions[questionCounter].correctAnswer) {
     result += 1;
-    console.log('Correct! Current result:', result);
-  } else {
-    console.log('Wrong! Current result:', result);
-  }
+  } 
 }
 
 //  -------- PLAY AGAIN ---------
@@ -70,14 +66,10 @@ playAgainBtn?.addEventListener('click', () => {
   questionCounter = 0; // resets questionCounter
   playAgain();  // playAgain funcion in playAgain.ts file
   checkIfQuizIsDone();
-  console.log('Points:', result); // dessa kan tas bort
-  console.log('Qs:', questionCounter); // dessa kan tas bort
 });
 
 
-//  -------- FINNISH BTN ---------
-const endBtn = document.querySelector('#finishQuizBtn'); // DUPLICATE?!? Finish  Quiz  button below - row 65
-endBtn?.addEventListener('click', getTimeCount);
+
 
 /* -----------------------------------------------------------------------
 ------------------ FINISH QUIZ BUTTON, SHOW END PAGE -----------------
@@ -97,10 +89,10 @@ finishQuizBtn.addEventListener('click', () => {
     if (selectedOption) {
       checkAnswer(selectedOption.value);
     }
+  getTimeCount();
   quizPage.classList.add('hidden');
   endPage.classList.remove('hidden');
   const time = getTimeCount();
-  console.log(time);
   resultContainer.innerHTML = `Du fick ${result} av 10 rätt! Din tid blev ${time} min`;
 });
 
