@@ -16,6 +16,9 @@ let result: number = 0;
 
 const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
+startBtn.addEventListener('click', () => {
+  newQuestions = getRandomQuestions(questions);
+});
 
 // -------- CHECK IF QUIZ IS DONE -----------
 function checkIfQuizIsDone() {
@@ -66,7 +69,7 @@ playAgainBtn?.addEventListener('click', () => {
   result = 0; // resets points
   questionCounter = 0; // resets questionCounter
   playAgain();  // playAgain funcion in playAgain.ts file
-
+  checkIfQuizIsDone();
   console.log('Points:', result); // dessa kan tas bort
   console.log('Qs:', questionCounter); // dessa kan tas bort
 });
@@ -104,7 +107,7 @@ finishQuizBtn.addEventListener('click', () => {
 /* -----------------------------------------------------------------------
 --------------------------- PRINT QUESTION ---------------------------
 ----------------------------------------------------------------------- */
-const newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
+let newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
 
 const questionWrapper = document.querySelector('#questionContainer') as HTMLDivElement;
 const currentQuestion = document.querySelector('#currentQuestion') as HTMLDivElement;
