@@ -10,7 +10,6 @@ function startGame(): void {
 
         startTimer(); 
         printQuestions();
-        // questionCounter(); ??
 };
 
 export default startGame;

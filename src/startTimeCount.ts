@@ -1,7 +1,7 @@
 let startTime: undefined | number;
 let totalTimeInSeconds: number;
 
-// Startar timer 
+// Starts timer 
 function startTimer(): void {
     startTime = Date.now();
 }
@@ -15,17 +15,17 @@ function getTimeCount(): string {
 
 function endTimer(): void {
     if (startTime !== undefined) {
-        // Beräkna skillnaden i sekunder och avrunda till ett heltal
+        // Calculates difference in seconds and rounds to whole number
         totalTimeInSeconds = Math.round((Date.now() - startTime) / 1000);
     }
 }
 
 function formatTime(seconds: number): string {
-    // Beräkna minuter och sekunder
+    // Calculate minutes & seconds
     const minutes = Math.round(seconds / 60);
     const remainingSeconds = seconds % 60;
 
-    // Lägg till ledande nollor om det behövs
+    // Add padding zeros
     const formattedMinutes = String(minutes).padStart(2, '0');
     const formattedSeconds = String(remainingSeconds).padStart(2, '0');
 

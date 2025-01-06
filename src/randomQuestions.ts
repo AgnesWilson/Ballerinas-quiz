@@ -7,7 +7,9 @@ interface IQuizQuestions {
   correctAnswer: string;
   isPlayed: boolean;
 }
-//                                   Input: Question Array    Return: Question Array
+
+// Takes input: Question Array
+// Returns: Question Array
 export function getRandomQuestions(questionsArray: IQuizQuestions[]): IQuizQuestions[] {
   const allPlayed = questionsArray.every(question => question.isPlayed); 
   // Checks if all questions are played = true and then returns true if that's the case. 

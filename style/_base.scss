@@ -1,5 +1,4 @@
-// --- BASE ---
-
+// --------- BASE ---------
 main {
   font-family: $main-font;
   display: flex;
@@ -8,144 +7,130 @@ main {
   align-items: center;
   background-color: $main-color;
 
-  
-
-    .startPage, 
-    .endPage {
-        //Lägger till end page här för att kunna återanvända stylign för knappen
-        width: 100%;
-        height: 100vh;
-        h1 {
-            color: $text-color;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-left: 0.5rem;
-        }
-
-        button,
-        .button {
-            //stylar bort så knappen ser ut som text 
-            //.button är knappen på end page 
-            background: none;
-            border: none;
-            text-decoration: underline;
-            cursor: pointer;
-            margin-top: 5rem;
-            font-size: 1.2rem;
-            margin-left: 0.5rem;
-
-            &:hover { //knappens text blir lite tjockare när man hovrar
-                font-weight: 500;
-            }
-        }
+  .startPage,
+  .endPage {
+    width: 100%;
+    height: 100vh;
+    h1 {
+      color: $text-color;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-left: 0.5rem;
     }
 
-    // ################# //
-    // #### QUIZ PAGE ## //
-    // ################# //
+    button,
+    .button {
+      // Styles button to look like text
+      background: none;
+      border: none;
+      text-decoration: underline;
+      cursor: pointer;
+      margin-top: 5rem;
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
 
-    .quizPage {
-        width: clamp(15rem, 40%, 30rem);
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center; 
-        color: $text-color;
-        input {
-            -webkit-appearance: none; 
-            width: 20px;
-            height: 20px;
-            border: 2px solid #555;
-            border-radius: 4px;
-            background-color: white;
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-        }
+      &:hover {
+        // Increase font-weight on hover
+        font-weight: 500;
+      }
+    }
+  }
 
-        input:checked {
-            background-color: $secondary-color; 
-        }
-
-        .questionWrapper {
-            width: 100%;
-            form {
-                font-size: clamp(1rem, 1.5vw, 2rem);
-                fieldset {
-                    display: flex;
-                    flex-direction: column;
-                    border: 1px solid black;
-                    gap: 1rem;
-                }
-            }
-        }
-        
-        .quizBtn {
-            margin-top: 1%;
-            width: clamp(98%, 99%, 100%);
-            height: 1.7rem;
-            border: 1px solid black;
-            border-radius: 0;
-            background-color: $main-color;
-            font-weight: bold;
-
-            &:hover {
-                background-color: $secondary-color;
-            }
-        }
+  // --------- QUIZ PAGE ---------
+  .quizPage {
+    width: clamp(15rem, 40%, 30rem);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    input {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      background-color: white;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
     }
 
-    .endPage { //styling end page 
-
-        .result { //statisk resultattext
-                margin-top: 5rem;
-                margin-left: 1rem;
-        }
-
-        .printSummary { //resultat som genereras från main.ts
-                margin-top: 1rem;
-                margin-left: 1rem;
-                line-height: 1.5rem;
-
-            .time { //span element för att kunna lägga tid-resultatet på en ny rad
-                    display: block;
-            }
-        }
-
-        .button { //flyttar ner knappen lite
-                margin-top: 10rem; 
-        }
-
-
+    input:checked {
+      background-color: $secondary-color;
     }
 
-    // ################# //
-    // #### FOOTER ##### //
-    // ################# //
-
-    footer {
-        width: 100%;
-        .currentQuestion {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: fixed;
-            bottom: 0.1rem;
-
-            span {
-                margin: 0.5rem;
-                margin-bottom: 0;
-                font-size: clamp(1rem, 1.5vw, 2rem);
-            }
+    .questionWrapper {
+      width: 100%;
+      form {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid black;
+          gap: 1rem;
         }
+      }
     }
 
-    //alla element som har klassen hidden blir gömda
-    .hidden {
-        display: none;
+    .quizBtn {
+      margin-top: 1%;
+      width: clamp(98%, 99%, 100%);
+      height: 1.7rem;
+      border: 1px solid black;
+      border-radius: 0;
+      background-color: $main-color;
+      font-weight: bold;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
     }
+  }
+
+  .endPage {
+    .result {
+      margin-top: 5rem;
+      margin-left: 1rem;
+    }
+
+    .printSummary {
+      margin-top: 1rem;
+      margin-left: 1rem;
+      line-height: 1.5rem;
+
+      .time {
+        display: block;
+      }
+    }
+
+    .button {
+      margin-top: 10rem;
+    }
+  }
+
+  // --------- FOOTER ---------
+  footer {
+    width: 100%;
+    .currentQuestion {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      bottom: 0.1rem;
+
+      span {
+        margin: 0.5rem;
+        margin-bottom: 0;
+        font-size: clamp(1rem, 1.5vw, 2rem);
+      }
+    }
+  }
+
+  // Used for toggle showing/hiding elements
+  .hidden {
+    display: none;
+  }
 }
-  
