@@ -1,8 +1,4 @@
-
-/* -----------------------------------------------------------------------
----- Activate the next-question button when the user chooses an answer ---
----------------------------- Two functions ---------------------------- */
-
+// Module for activating next question button
 const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
 
 function ifRadioBtnHasBeenChecked() {
@@ -10,7 +6,6 @@ function ifRadioBtnHasBeenChecked() {
     const q1 = document.querySelector('#q1') as HTMLInputElement;
     const q2 = document.querySelector('#q2') as HTMLInputElement;
     const q3 = document.querySelector('#q3') as HTMLInputElement;
-
 
     // IF any of the buttons q1-q3 is checked
     // THEN make the disable button false, so it can be clicked
@@ -24,7 +19,7 @@ function ifRadioBtnHasBeenChecked() {
 
 // Event-listeners for radio-btns
 function activateNextQuestionBtn() {
-    // declaring q1-q3 againn since they were declared inside the ifRadioBtnHasBeenChecked() 
+    // declaring q1-q3 again since they were declared inside the ifRadioBtnHasBeenChecked() 
     // and not globally in this module like they were before 
     const q1 = document.querySelector('#q1') as HTMLInputElement;
     const q2 = document.querySelector('#q2') as HTMLInputElement;
