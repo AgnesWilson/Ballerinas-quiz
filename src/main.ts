@@ -83,7 +83,7 @@ finishQuizBtn.addEventListener('click', () => {
   quizPage.classList.add('hidden');
   endPage.classList.remove('hidden');
   const time = getTimeCount();
-  resultContainer.innerHTML = `Du fick ${result} av 10 rätt! Din tid blev ${time} min`;
+  resultContainer.innerHTML = `Du fick ${result} av 10 rätt! <span class="time">Din tid blev ${time} min</span>`;
 });
 
 // --------- PRINT QUESTION ---------
