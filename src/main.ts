@@ -6,14 +6,53 @@ import { getRandomQuestions } from './randomQuestions.ts';
 import startGame from './startGameBtn.ts';
 import { ifRadioBtnHasBeenChecked, activateNextQuestionBtn } from './nextQuestionBtn';
 
+// ------------ BUTTON VARIABLES  ------------
+
+// Start Button 
+const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
+
+// Next Question Button 
+const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
+
+// Play Again Button 
+const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
+
+// Finish Quiz Button
+const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
+
+
+//  -------- PAGE / ELEMENT VARIABLES ------------
+
+// Quiz Page
+const quizPage = document.querySelector('#quizPage') as HTMLDivElement;
+
+// Question Wrapper on Quiz page
+const questionWrapper = document.querySelector('#questionContainer') as HTMLDivElement;
+
+// Current Question on Quiz Page
+const currentQuestion = document.querySelector('#currentQuestion') as HTMLDivElement;
+
+// End Page 
+const endPage = document.querySelector('#endPage') as HTMLDivElement;
+
+// Result Container
+const resultContainer = document.querySelector('#resultContainer') as HTMLDivElement;
+
+//  -------- OTHER VARIABLES ------------
+
+// Question array
+let newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
+
 // Question Counter Variable
 let questionCounter: number = 0;
 
 // Result Variable
 let result: number = 0;
 
+
+
+
 //  -------- START GAME ------------
-const startBtn = document.querySelector('#startBtn') as HTMLButtonElement;
 startBtn.addEventListener('click', startGame);
 startBtn.addEventListener('click', () => {
   newQuestions = getRandomQuestions(questions);
@@ -31,7 +70,6 @@ function checkIfQuizIsDone() {
 }
 
 //  -------- NEXT QUESTION ---------
-const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
 nextQuestionBtn.addEventListener('click', clickNextQuestion);
 
 function clickNextQuestion() {
@@ -57,7 +95,6 @@ function checkAnswer(playerAnswer: string) {
 }
 
 //  --------- PLAY AGAIN ---------
-const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 playAgainBtn?.addEventListener('click', () => {
   result = 0; // resets points
   questionCounter = 0; // resets questionCounter
@@ -66,10 +103,6 @@ playAgainBtn?.addEventListener('click', () => {
 });
 
 // --------- FINISH QUIZ BUTTON, SHOW END PAGE ---------
-const quizPage = document.querySelector('#quizPage') as HTMLDivElement;
-const endPage = document.querySelector('#endPage') as HTMLDivElement;
-const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
-const resultContainer = document.querySelector('#resultContainer') as HTMLDivElement;
 
 // when finish quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
@@ -87,10 +120,6 @@ finishQuizBtn.addEventListener('click', () => {
 });
 
 // --------- PRINT QUESTION ---------
-let newQuestions = getRandomQuestions(questions); // Call randomQuestions function to draft 10 questions to use.
-
-const questionWrapper = document.querySelector('#questionContainer') as HTMLDivElement;
-const currentQuestion = document.querySelector('#currentQuestion') as HTMLDivElement;
 
 function printQuestions() {
   questionWrapper.innerHTML = `
