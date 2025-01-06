@@ -8,10 +8,7 @@ main {
   align-items: center;
   background-color: $main-color;
 
-  //alla element som har klassen hidden blir gömda
-    .hidden {
-        display: none;
-    }
+  
 
     .startPage, 
     .endPage {
@@ -44,27 +41,111 @@ main {
         }
     }
 
+    // ################# //
+    // #### QUIZ PAGE ## //
+    // ################# //
+
+    .quizPage {
+        width: clamp(15rem, 40%, 30rem);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        color: $text-color;
+        input {
+            -webkit-appearance: none; 
+            width: 20px;
+            height: 20px;
+            border: 2px solid #555;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        input:checked {
+            background-color: $secondary-color; 
+        }
+
+        .questionWrapper {
+            width: 100%;
+            form {
+                font-size: clamp(1rem, 1.5vw, 2rem);
+                fieldset {
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid black;
+                    gap: 1rem;
+                }
+            }
+        }
+        
+        .quizBtn {
+            margin-top: 1%;
+            width: clamp(98%, 99%, 100%);
+            height: 1.7rem;
+            border: 1px solid black;
+            border-radius: 0;
+            background-color: $main-color;
+            font-weight: bold;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
     .endPage { //styling end page 
 
         .result { //statisk resultattext
-            margin-top: 5rem;
-            margin-left: 1rem;
+                margin-top: 5rem;
+                margin-left: 1rem;
         }
 
         .printSummary { //resultat som genereras från main.ts
-            margin-top: 1rem;
-            margin-left: 1rem;
-            line-height: 1.5rem;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                line-height: 1.5rem;
 
             .time { //span element för att kunna lägga tid-resultatet på en ny rad
-                display: block;
+                    display: block;
             }
         }
 
         .button { //flyttar ner knappen lite
-            margin-top: 10rem; 
+                margin-top: 10rem; 
         }
 
+
+    }
+
+    // ################# //
+    // #### FOOTER ##### //
+    // ################# //
+
+    footer {
+        width: 100%;
+        .currentQuestion {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0.1rem;
+
+            span {
+                margin: 0.5rem;
+                margin-bottom: 0;
+                font-size: clamp(1rem, 1.5vw, 2rem);
+            }
+        }
+    }
+
+    //alla element som har klassen hidden blir gömda
+    .hidden {
+        display: none;
     }
 }
   
