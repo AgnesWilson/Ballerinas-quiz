@@ -14,7 +14,7 @@ A group project during our education at Medieinstitutet where we created a quiz 
 - Presents a **startingpage** to the user
 - Presents a **quiz page**, showing one question at a time with three answer choices. 
 - A **timer** starts when the quiz begins, tracking total game time, to present at the end. 
-- The **current question** number is shown in the corner. 
+- The **current question** number is presented at the botton of the page. 
 - After 10 questions an **end page** appears, showing the number of correct answers and total playtime. 
 
 ## ▶️ Usage
