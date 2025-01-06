@@ -11,7 +11,7 @@ interface IQuizQuestions {
 const questions: IQuizQuestions[] = [
     {
         id: 1,
-        questionText: 'Vilket år lanserades Ballerina kexet?',
+        questionText: 'Vilket år lanserades Ballerinakexet?',
         answerOptionA: '1963',
         answerOptionB: '1973',
         answerOptionC: '1983',
@@ -21,7 +21,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 2,
-        questionText: 'Vad är inte ett Ballerina kex?',
+        questionText: 'Vad är inte ett Ballerinakex?',
         answerOptionA: 'Singoalla',
         answerOptionB: 'Ballerina',
         answerOptionC: 'Ballerina',
@@ -31,7 +31,7 @@ const questions: IQuizQuestions[] = [
     
     {
         id: 3,
-        questionText: 'Vilket kex företag tillverkar Ballerina kexet?',
+        questionText: 'Vilket kexföretag tillverkar Ballerinakexet?',
         answerOptionA: 'Marabou',
         answerOptionB: 'Göteborgs Kex',
         answerOptionC: 'Cloetta',
@@ -41,7 +41,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 4,
-        questionText: 'Det första Ballerina kexet hade en smak av vad?',
+        questionText: 'Det första Ballerinakexet hade en smak av vad?',
         answerOptionA: 'Vanilj & choklad',
         answerOptionB: 'Hallon & Lakrits',
         answerOptionC: 'Choklad & Hasselnöt',
@@ -51,7 +51,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 5,
-        questionText: 'Vad är det unika med Ballerina kexets form?',
+        questionText: 'Vad är det unika med Ballerinakexets form?',
         answerOptionA: 'Det är hjärtformat',
         answerOptionB: 'Det har ett hål i mitten',
         answerOptionC: 'Det är trekantigt',
@@ -61,7 +61,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 6,
-        questionText: 'Hur många Ballerina kex finns det i en vanlig förpackning?',
+        questionText: 'Hur många Ballerinakex finns det i en vanlig förpackning?',
         answerOptionA: '12',
         answerOptionB: '18',
         answerOptionC: '24',
@@ -71,7 +71,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 7,
-        questionText: 'Vad heter Ballerina kexets onda amerikanska släkting?',
+        questionText: 'Vad heter Ballerinakexets onda amerikanska släkting?',
         answerOptionA: 'Arne',
         answerOptionB: 'Oreo',
         answerOptionC: 'Jaffa',
@@ -81,7 +81,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 8,
-        questionText: 'Vad är Ballerina kexets slogan?',
+        questionText: 'Vad är Ballerinakexets slogan?',
         answerOptionA: 'För den lilla stunden av njutning',
         answerOptionB: 'Lika god som den ser ut',
         answerOptionC: 'Perfekt för alla tillfällen',
@@ -91,7 +91,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 9,
-        questionText: 'Vilken är den äckligaste Ballerina smaken?',
+        questionText: 'Vilken är den äckligaste Ballerinasmaken?',
         answerOptionA: 'Salt Vanilj',
         answerOptionB: 'Salt Vanilj',
         answerOptionC: 'Salt Vanilj',
@@ -104,7 +104,7 @@ const questions: IQuizQuestions[] = [
         questionText: 'Vad betyder namnet Ballerina?',
         answerOptionA: 'Ett dansande kex',
         answerOptionB: 'Elegans och lätthet',
-        answerOptionC: 'Inget, det är ett släkt namn',
+        answerOptionC: 'Inget, det är ett släktnamn',
         correctAnswer: 'Elegans och lätthet',
         isPlayed: false,
     },
@@ -114,7 +114,7 @@ const questions: IQuizQuestions[] = [
         questionText: 'Vilken typ av kex är Ballerina?',
         answerOptionA: 'En fylld kaka',
         answerOptionB: 'En småkaka',
-        answerOptionC: 'Ett flarna v något slag',
+        answerOptionC: 'Ett flarn av något slag',
         correctAnswer: 'En fylld kaka',
         isPlayed: false,
     },
@@ -123,7 +123,7 @@ const questions: IQuizQuestions[] = [
         id: 12,
         questionText: 'Vad var speciellt med Ballerina Kladdkaka?',
         answerOptionA: 'Den har extra mycket fyllning',
-        answerOptionB: 'Den är rundare än andra Ballerina kex',
+        answerOptionB: 'Den är rundare än andra Ballerinakex',
         answerOptionC: 'Den smakar kladdkaka',
         correctAnswer: 'Den smakar kladdkaka',
         isPlayed: false,
@@ -131,7 +131,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 13,
-        questionText: 'Vilken av följande var aldrig en Ballerina smak?',
+        questionText: 'Vilken av följande var aldrig en Ballerinasmak?',
         answerOptionA: 'Blåbär',
         answerOptionB: 'Lakrits',
         answerOptionC: 'Kola',
@@ -151,7 +151,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 15,
-        questionText: 'Heter det Ballerina kex eller Ballerina kex?',
+        questionText: 'Heter det Ballerinakex eller Ballerinakex?',
         answerOptionA: 'K-ex',
         answerOptionB: 'Kex',
         answerOptionC: 'Kjecks',
@@ -171,7 +171,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 17,
-        questionText: 'Hur förvarar du bäst dina Ballerina kex?',
+        questionText: 'Hur förvarar du bäst dina Ballerinakex?',
         answerOptionA: 'Höger innerficka',
         answerOptionB: 'Handskfacket',
         answerOptionC: 'Förvara??',
@@ -181,7 +181,7 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 18,
-        questionText: 'Hur tar man bäst isär ett Ballerina kex?',
+        questionText: 'Hur tar man bäst isär ett Ballerinakex?',
         answerOptionA: 'Vrider motsols',
         answerOptionB: 'Vrider medsols',
         answerOptionC: 'Rattar liksom fram och tillbaka',
@@ -193,7 +193,7 @@ const questions: IQuizQuestions[] = [
         id: 19,
         questionText: 'Ballerina är också namnet på...',
         answerOptionA: 'Ett programmeringsspråk',
-        answerOptionB: 'En katt sort från Mongoliet',
+        answerOptionB: 'En kattsort från Mongoliet',
         answerOptionC: 'Piskan som lejontämjare använder',
         correctAnswer: 'Ett programmeringsspråk',
         isPlayed: false,
@@ -201,22 +201,17 @@ const questions: IQuizQuestions[] = [
 
     {
         id: 20,
-        questionText: 'Hur ska man plantera ballerina potatis?',
+        questionText: 'Hur ska man plantera Ballerinapotatis?',
         answerOptionA: '5-7 mm radavstånd',
         answerOptionB: '5-15 m radavstånd',
         answerOptionC: '50-70 cm radavstånd',
         correctAnswer: '50-70 cm radavstånd',
         isPlayed: false,
     },
-
-
 ];
 
-
 /* ---------------Funktion för att testa att alla frågor ger ett korrekt svar. ---------------------
-
 Rekommendation:  Om nya frågor läggs till, kör den funktion i terminalen för att testa att inga buggar finns.
-
 
 let i = 1;
 
@@ -237,7 +232,4 @@ questions.forEach((check) => {
 });
 */
 
-
-
 export default questions;
-
