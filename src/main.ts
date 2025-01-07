@@ -49,9 +49,6 @@ let questionCounter: number = 0;
 // Result Variable
 let result: number = 0;
 
-
-
-
 //  -------- START GAME ------------
 startBtn.addEventListener('click', startGame);
 startBtn.addEventListener('click', () => {
@@ -116,6 +113,7 @@ finishQuizBtn.addEventListener('click', () => {
   quizPage.classList.add('hidden');
   endPage.classList.remove('hidden');
   const time = getTimeCount();
+  currentQuestion.innerHTML = ``; // Removes/Hides current question
   resultContainer.innerHTML = `Du fick ${result} av 10 rätt! <span class="time">Din tid blev ${time} min</span>`;
 });
 
@@ -146,8 +144,6 @@ function printQuestions() {
 
   activateNextQuestionBtn();
 }
-
-playAgainBtn.addEventListener('click', printQuestions);
 
 // Exports printQuestions to startGameBtn.ts
 export default printQuestions;
