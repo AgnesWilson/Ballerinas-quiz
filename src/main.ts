@@ -49,9 +49,6 @@ let questionCounter: number = 0;
 // Result Variable
 let result: number = 0;
 
-
-
-
 //  -------- START GAME ------------
 startBtn.addEventListener('click', startGame);
 startBtn.addEventListener('click', () => {
@@ -107,7 +104,6 @@ playAgainBtn?.addEventListener('click', () => {
 // when finish quiz btn is clicked, quiz page is hidden and end page is shown. Result is printed
 finishQuizBtn.addEventListener('click', () => {
   const selectedOption = document.querySelector('input[name="question"]:checked') as HTMLInputElement;
-
   // If an option is selected, check the answer if it matches the option
   if (selectedOption) {
     checkAnswer(selectedOption.value);

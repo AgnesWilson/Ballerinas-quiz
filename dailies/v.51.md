@@ -106,5 +106,3 @@ Idag: Ska äntligen börja koda lite och jobbar nu på att nextQuestionBtn ska a
 Hinder: Har svårt att greppa hur koden ska hänga ihop och vad det är jag ska göra och vad det är någon annan gör. (dependencies) men känns kul att få labba lite med det! 
 
 ---
- 
- 

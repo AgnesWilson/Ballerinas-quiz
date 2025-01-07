@@ -1,5 +1,6 @@
 // Module for activating next question button
 const nextQuestionBtn = document.querySelector('#nextQuestionBtn') as HTMLButtonElement;
+const finishQuizBtn = document.querySelector('#finishQuizBtn') as HTMLButtonElement;
 
 function ifRadioBtnHasBeenChecked() {
     // Declaring the q1-q3 inside the function 
@@ -12,8 +13,10 @@ function ifRadioBtnHasBeenChecked() {
     // ELSE the button is disabled and not clickable
     if (q1.checked || q2.checked || q3.checked) {
         nextQuestionBtn.disabled = false;
+        finishQuizBtn.disabled = false;
     } else {
         nextQuestionBtn.disabled = true;
+        finishQuizBtn.disabled = true;
     }
 }
 

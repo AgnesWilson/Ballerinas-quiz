@@ -3,7 +3,6 @@
 ### Hur meddelar vi förhinder?
     Man meddelar i Teams-chatten så tidigt som möjligt om man inte kan delta i ett inbokat möte. Om man vet i förväg att man inte kan närvara vid exempelvis en standup ska man skriva en sammanfattning av det man skulle ha tagit upp och skicka i god tid till övriga gruppmedlemmar. Dessutom är man skyldig att läsa igenom “protokollet” efter mötet man missat.
 
-
 ### Vilket språkbruk har vi?
     Svenska arbetsspråk. Engelska kodning
 
@@ -27,7 +26,6 @@
 
 ### Vilka dagar och tider jobbar ni
     Vi bestämmer att vi primärt bokar in möten, avstämningar, live-kodningar osv mellan 9.00 och 16.00. Vi är öppna för att vara flexibla om det skulle krisa men försöker hålla oss till dessa tider. 
-
 
 ### Var träffas vi 
     Vi har obligatoriska möten på Teams där man förväntas närvara om man inte meddelat något annat i förväg. Utöver dessa möten kan man om man önskar boka in icke-obligatoriska möten för att kolla på ett specifikt problem eller jobba på något tillsammans. Detta kan då vara på plats (för de som kan) eller på Teams. 
