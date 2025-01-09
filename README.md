@@ -1,4 +1,3 @@
-lig
 # Ballerina Quiz
 
 A group project during our education at Medieinstitutet where we created a quiz about "Ballerinas", a type of Swedish cookies. 🍪
@@ -50,10 +49,6 @@ Built by Davkje, AgnesWilson, CatrinTQ, KarinHson, Osklundev & Carl4000 with hel
 ### 🎨 Wireframe
 
 ![Wireframe](assets/screenshots/wireframe.png)
-
-### 🔍 Validation and Lighthouse Analysis
-
-![Validation](assets/screenshots/*ADD HERE*)
 
 # 🎯 Agile method
 
