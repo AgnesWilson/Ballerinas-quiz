@@ -73,7 +73,7 @@ We have had daily standups that you can follow here:
 We have had two sprints and retros:
 
 - [Retro 1](assets/screenshots/retro-one.png)
-- [Retro 2](assets/screenshots/*ADD HERE*)
+- [Retro 2](assets/screenshots/retro-two.png)
 
 ## 📸 Screen grab
 
