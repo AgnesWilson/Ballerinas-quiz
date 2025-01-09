@@ -1,4 +1,4 @@
-
+lig
 # Ballerina Quiz
 
 A group project during our education at Medieinstitutet where we created a quiz about "Ballerinas", a type of Swedish cookies. 🍪
@@ -77,6 +77,13 @@ We have had two sprints and retros:
 
 ## 📸 Screen grab
 
-Base planning of the project and sprint one & two
+Base planning of the project in sprint one, two and also after the last sprint. 
 ![Screenshot of sprint one planning/backlog planning](assets/screenshots/sprint-one-planning.png)
 ![Screenshot of sprint two planning/backlog planning](assets/screenshots/sprint-two-planning.png)
+![Screenshot of plannning/backlog after the second sprint](assets/screenshots/sprint-two-done.png)
+
+
+## 🚀 Performance
+
+- [lighthouse](assets/screenshots/lighthouse.png)
+- [html-validation](assets/screenshots/html-validation.png)
