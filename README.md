@@ -50,12 +50,12 @@ Built by Davkje, AgnesWilson, CatrinTQ, KarinHson, Osklundev & Carl4000 with hel
 
 ![Wireframe](assets/screenshots/wireframe.png)
 
-# 🎯 Agile method
+## 🎯 Agile method
 
-## 📝 Group comitments 
+### 📝 Group comitments 
 - [Contract](comitments.md)
 
-## 🙋‍♀️ Standups 
+### 🙋‍♀️ Standups 
 We have had daily standups that you can follow here:
 
 - [Week 51](dailies/v.51.md)
@@ -64,13 +64,13 @@ We have had daily standups that you can follow here:
 
 - [Week 2](dailies/v2.md)
 
-## 🔥 Retros
+### 🔥 Retros
 We have had two sprints and retros:
 
 - [Retro 1](assets/screenshots/retro-one.png)
 - [Retro 2](assets/screenshots/retro-two.png)
 
-## 📸 Screen grab
+### 📸 Screen grab
 
 Base planning of the project in sprint one, two and also after the last sprint. 
 ![Screenshot of sprint one planning/backlog planning](assets/screenshots/sprint-one-planning.png)
